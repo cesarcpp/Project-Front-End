@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="../favicon/your-logo.png">
+        <style type="text/css">
+            @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+            * {
+                margin: 0 auto;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Open Sans', sans-serif;
+            }
+
+            #menu-h{
+                background-color: rgb(37, 37, 39);
+            }
+
+            #menu-h ul {
+                max-width: 800px;
+                list-style: none;
+                padding: 0;
+            }
+
+            #menu-h ul li {
+                display: inline;
+            }
+
+            #menu-h ul li a {
+                color: #FFF;
+                padding: 20px;
+                display: inline-block;
+                text-decoration: none;
+                transition: background .4s;
+            }
+
+            #menu-h ul li a:hover {
+                background-color: rgb(24, 139, 233);
+            }
+            select {
+                width:130px;
+                height:30px;
+                font-family: cursive;
+                font-size:14px;
+                padding:5px;
+                background-color:#45675D;
+                //Recomenda-se deixar essa linha de fora, porque a formatação a esquerta a justificada nos select fica melhor.
+                padding-left:40px;
+                color: white;
+            }
+            option {
+                background-color:#45765D;
+                color: white;
+            }
+            label {
+                font-family: cursive;
+            }
+            input {
+                background-color: firebrick;
+                font-family: cursive;
+                color: black;
+                border-radius: 2px;
+                padding: 2px;
+            }
+            #submit_add {
+                background-color: beige;
+                font-family: serif;
+                position: absolute;
+            }
+            #submit_del {
+                background-color: beige;
+                font-family: serif;
+                position: absolute;
+            }
+            #submit_alter {
+                background-color: beige;
+                font-family: serif;
+                margin-left: 7%;
+            }
+        </style>
+        <title>Livraria - Buscar Por Categoria</title>
+    </head>
+    <body>
+        <nav id="menu-h">
+            <ul>
+                <li>
+                    <a href="../index.html">Inicio</a>
+                </li>
+                <li><a href="listaLivrosporCategoria.html">Busca por Categoria</a></li>
+                <li><a href="mostrarLivros.html">Busca por Código</a></li>
+                <li><a href="addlivros.html">Outros</a></li>
+            </ul>
+        </nav>
+        <br>
+        <br>
+        <form id="forms" method="post">
+            <fieldset>
+                <legend>Adicionar Livro</legend>
+                <table cellspacing="10">
+                    <tr>
+                        <td>
+                            <label for="codigo">Código: </label>
+                        </td>
+                        <td align="left">
+                            <input type="text" name="codigo">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="titulo">Titulo: </label>
+                        </td>
+                        <td align="left">
+                            <input type="text" name="titulo" >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="autor">Autor: </label>
+                        </td>
+                        <td align="left">
+                            <input type="text" name="autor">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="autor">Categoria: </label>
+                        </td>
+                        <td align="left">
+                            <select id="selection">
+                                <option value="">Selecione</option>
+                                <option value="Arquitetura">Arquitetura</option>
+                                <option value="Design">Design</option>
+                                <option value="Informatica">Informática</option>
+                                <option value="Literatura Brasileira">Literatura Brasileira</option>
+                                <option value="Literatura Infantil">Literatura Infantil</option>
+                                <option value="Literatura Universal">Literatura Universal</option>
+                                <option value="Musica e Arte">Musíca e Arte</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="value">Valor: </label>
+                        </td>
+                        <td align="left">
+                            <input type="text" name="value" size="10" maxlength="10">
+                        </td>
+                    </tr>
+                </table>
+                <input type="button" id="submit_add" value="Adicionar">
+                <input type="button" id="submit_alter" value="Alterar">
+            </fieldset>
+            <br>
+            <br>
+            <fieldset>
+                <legend>Excluir Livro</legend>
+                <table cellspacing="10">
+                    <tr>
+                        <td>
+                            <label for="codigo_2">Código: </label>
+                        </td>
+                        <td align="left">
+                            <input type="text" name="codigo_2">
+                        </td>
+                    </tr>
+                </table>
+                <input type="button" id="submit_del" value="Excluir">
+            </fieldset>
+        </form>
+    </body>
+</html>
